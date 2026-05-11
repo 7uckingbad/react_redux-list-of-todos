@@ -10,13 +10,15 @@ export const filterSlice = createSlice({
   initialState,
   reducers: {
     setQuery: (state, action) => {
+      // eslint-disable-next-line no-param-reassign
       state.query = action.payload;
     },
     setStatus: (state, action) => {
-      state.status = action.payload
+      // eslint-disable-next-line no-param-reassign
+      state.status = action.payload;
     },
   },
 });
 
-export const {setQuery, setStatus} = filterSlice.actions;
+export const { setQuery, setStatus } = filterSlice.actions;
 export default filterSlice.reducer;

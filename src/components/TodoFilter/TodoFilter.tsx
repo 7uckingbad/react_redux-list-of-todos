@@ -6,6 +6,7 @@ import { useAppSelector } from '../../app/hook';
 export const TodoFilter: React.FC = () => {
   const { query } = useAppSelector(state => state.filter);
   const dispatch = useDispatch();
+
   return (
     <form
       className="field has-addons"

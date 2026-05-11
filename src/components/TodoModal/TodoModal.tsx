@@ -12,11 +12,17 @@ export const TodoModal: React.FC = () => {
   const currentTodo = useAppSelector(state => state.currentTodo);
 
   useEffect(() => {
-    if (!currentTodo) return;
+    if (!currentTodo) {
+      return;
+    }
+
     getUser(currentTodo.userId).then(setUser);
   }, [currentTodo]);
 
-  if (!currentTodo) return null;
+  if (!currentTodo) {
+    return null;
+  }
+
   return (
     <div className="modal is-active" data-cy="modal">
       <div className="modal-background" />

@@ -16,6 +16,7 @@ export function App() {
       setLoading(true);
       try {
         const data = await getTodos();
+
         dispatch(setTodos(data));
       } catch {
         throw new Error('Error');
@@ -23,8 +24,10 @@ export function App() {
         setLoading(false);
       }
     };
+
     loadTodos();
-  }, []);
+  }, [dispatch]);
+
   return (
     <>
       <div className="section">
